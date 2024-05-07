@@ -1,1 +1,6 @@
 # neural_network_demo
+
+## Digit Classification  
+Each input image (of size $28$ $\times$ $28$) is represented using a vector $v$ of size $784$ $\times$ $1$. Each component of vector $v$ represents the color value of the correspoding pixel in the input image. Because the image is black and white, each pixel's color will be represented by an integer from $0$ to $255$, where $0$ is black and $255$ is white. The trainning set contains in total $60000$ hand-written digit images, then matrix $A$ of size $784$ $\times$ $60000$ represents all the input data from the trainning set, where each column represents the color data of a single input image.  
+The current implementation implements a modular design that allows each layer to calculate the local gradient and the downstream gradient individually. The architecture contains model, control and utils.  
+Model contains the components of the neural network including dense layer, activation and loss functions. Utils contains common methods for data input and data transformation. Control includes the director NNRunner class, which manage the interactions of various components of the neural network.
